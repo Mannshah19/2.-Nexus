@@ -1068,18 +1068,18 @@ textarea.contact-form_input {
     background-color: var(--nx-grey);
     overflow: hidden;
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 16px;
+    grid-template-columns: 1fr 1.2fr;
+    gap: 0;
     border-radius: 50px;
 }
 .footer_left {
     padding: 72px;
     color: var(--nx-black);
-    height: 553px;
-    width: 640px;
+    height: auto;
+    min-height: 550px;
     display: flex;
     flex-direction: column;
-    justify-content: normal;
+    justify-content: space-between;
     gap: 40px;
 }
 .footer_left h2 {
@@ -1129,12 +1129,12 @@ textarea.contact-form_input {
     padding: 72px;
     background-color: var(--nx-blue);
     color: var(--nx-white);
-    height: 553px;
-    width: 640px;
+    height: auto;
+    min-height: 550px;
     display: flex;
     flex-direction: column;
     gap: 40px;
-    border-radius: 50px;
+    border-radius: 0 50px 50px 0;
 }
 .footer_right .heading-style-h5 {
     font-size: 24px;
@@ -1159,10 +1159,15 @@ textarea.contact-form_input {
     border-right: none;
     border-bottom: 1px solid var(--nx-white);
     border-radius: 0px;
-    color: var(--nx-black);
+    color: var(--nx-white);
+    font-size: 18px;
 }
 .footer_right .contact-form_input::placeholder {
     color: rgba(255, 255, 255, 0.6);
+}
+.footer_right .contact-form_input:focus {
+    border-bottom-color: rgba(255, 255, 255, 0.8);
+    color: var(--nx-white);
 }
 @media screen and (max-width: 991px) {
     .navbar_component {
@@ -1357,4 +1362,21 @@ textarea.contact-form_input {
     width: 100%;
     height: 100%;
     object-fit: cover;
+}
+
+/* AOS Animations */
+[data-aos] {
+    opacity: 0;
+    transition-property: opacity, transform;
+}
+
+[data-aos].aos-animate {
+    opacity: 1;
+}
+
+@media screen and (prefers-reduced-motion: reduce) {
+    [data-aos] {
+        transition-duration: 0.01ms !important;
+        animation-duration: 0.01ms !important;
+    }
 }
