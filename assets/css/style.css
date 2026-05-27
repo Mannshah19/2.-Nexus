@@ -257,7 +257,7 @@ p {
 }
 .hero_component {
     width: 100%;
-    max-width: 1296px;
+    max-width: 1368px;
     height: 667px;
     padding: 90px 60px;
     background-color: var(--nx-light-black);
@@ -326,7 +326,7 @@ p {
 }
 .logo-wrapper {
     width: 100%;
-    max-width: 1296px;
+    max-width: 1368x;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -443,7 +443,7 @@ p {
 }
 .agenda_component {
     width: 100%;
-    max-width: 1296px;
+    max-width: 1368px;
     padding: 128px 64px;
     background-color: var(--nx-light-black);
     border-radius: 50px;
@@ -468,7 +468,7 @@ p {
 }
 .agenda_row {
     width: 100%;
-    max-width: 1168px;
+    max-width: 1368px;
     min-height: 154px;
     height: auto;
     display: grid;
@@ -762,7 +762,7 @@ p {
 }
 .register_component {
     width: 100%;
-    max-width: 1296px;
+    max-width: 1368px;
     height: 416px;
     padding: 96px;
     background-color: var(--nx-light-black);
@@ -867,7 +867,7 @@ p {
 }
 .contact_component {
     width: 100%;
-    max-width: 1296px;
+    max-width: 1368px;
     padding: 90px 48px;
     background-color: var(--nx-light-black);
     border-radius: 50px;
@@ -1015,10 +1015,11 @@ textarea.contact-form_input {
 }
 .contact-map-wrapper {
     width: 100%;
-    max-width: 1200px;
+    max-width: 1368px;
     height: 675px;
     overflow: hidden;
     border-radius: 50px;
+    margin-top: 2rem;
 }
 .section_footer {
     width: 100%;
