@@ -322,15 +322,19 @@ p {
 }
 .section_logos {
     width: 100%;
-    height: 210px;
+    height: auto;
+    padding: 0 5%;
 }
 .logo-wrapper {
     width: 100%;
-    max-width: 1368x;
+    max-width: 1368px;
+    margin-left: auto;
+    margin-right: auto;
     display: flex;
     justify-content: space-between;
     align-items: center;
     gap: 16px;
+    padding: 40px 0;
 }
 .logo {
     height: 50px;
@@ -348,8 +352,13 @@ p {
 .section_feature {
     width: 100%;
     height: auto;
+    padding: 0 5%;
 }
 .feature_component {
+    width: 100%;
+    max-width: 1368px;
+    margin-left: auto;
+    margin-right: auto;
     display: grid;
     grid-template-columns: 0.75fr 1fr;
     grid-template-rows: auto auto;
@@ -440,10 +449,13 @@ p {
 .section_agenda {
     width: 100%;
     height: auto;
+    padding: 0 5%;
 }
 .agenda_component {
     width: 100%;
     max-width: 1368px;
+    margin-left: auto;
+    margin-right: auto;
     padding: 128px 64px;
     background-color: var(--nx-light-black);
     border-radius: 50px;
@@ -532,8 +544,13 @@ p {
 .section_speakers {
     width: 100%;
     height: auto;
+    padding: 0 5%;
 }
 .speakers_grid {
+    width: 100%;
+    max-width: 1368px;
+    margin-left: auto;
+    margin-right: auto;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 20px;
@@ -590,8 +607,13 @@ p {
 .section_why {
     width: 100%;
     height: auto;
+    padding: 0 5%;
 }
 .why_grid {
+    width: 100%;
+    max-width: 1368px;
+    margin-left: auto;
+    margin-right: auto;
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 16px;
@@ -648,8 +670,13 @@ p {
 .section_testimonial {
     width: 100%;
     height: auto;
+    padding: 0 5%;
 }
 .testominial_grid {
+    width: 100%;
+    max-width: 1368px;
+    margin-left: auto;
+    margin-right: auto;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 16px;
@@ -759,10 +786,13 @@ p {
 .section_register {
     width: 100%;
     height: auto;
+    padding: 0 5%;
 }
 .register_component {
     width: 100%;
     max-width: 1368px;
+    margin-left: auto;
+    margin-right: auto;
     height: 416px;
     padding: 96px;
     background-color: var(--nx-light-black);
@@ -796,6 +826,10 @@ p {
     pointer-events: none;
 }
 .ticket_component {
+    width: 100%;
+    max-width: 1368px;
+    margin-left: auto;
+    margin-right: auto;
     display: flex;
     flex-direction: column;
     gap: 60px;
@@ -864,10 +898,13 @@ p {
 .section_template {
     width: 100%;
     height: auto;
+    padding: 0 5%;
 }
 .contact_component {
     width: 100%;
     max-width: 1368px;
+    margin-left: auto;
+    margin-right: auto;
     padding: 90px 48px;
     background-color: var(--nx-light-black);
     border-radius: 50px;
