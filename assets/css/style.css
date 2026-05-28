@@ -1170,12 +1170,29 @@ textarea.contact-form_input {
     color: var(--nx-white);
 }
 @media screen and (max-width: 991px) {
+    h1, .heading-style-h1 {
+        font-size: 64px;
+        line-height: 64px;
+    }
+    h2 {
+        font-size: 32px;
+        line-height: 40px;
+    }
+    .heading-style-h4 {
+        font-size: 26px;
+        line-height: 32px;
+    }
+    .heading-style-h5 {
+        font-size: 20px;
+        line-height: 28px;
+    }
     .navbar_component {
         height: auto;
         min-height: 64px;
         padding: 16px 5%;
     }
     .navbar_menu-links {
+        display: flex;
         flex-direction: column;
         align-items: center;
         gap: 8px;
@@ -1219,6 +1236,9 @@ textarea.contact-form_input {
         padding: 72px 40px;
         gap: 40px;
     }
+    .hero-title {
+        height: auto;
+    }
     .section_hero, .padding-global.padding-section-medium.is-flex {
         height: auto;
     }
@@ -1244,12 +1264,12 @@ textarea.contact-form_input {
         padding: 48px 24px;
     }
     .register_component {
-        height: 280px;
-        padding: 64px;
+        height: auto;
+        padding: 48px 24px;
     }
     .register-timer {
-        font-size: 128px;
-        line-height: 128px;
+        font-size: 80px;
+        line-height: 88px;
     }
     .ticket_card {
         min-height: auto;
@@ -1276,6 +1296,18 @@ textarea.contact-form_input {
     }
 }
 @media screen and (max-width: 767px) {
+    h1, .heading-style-h1 {
+        font-size: 48px;
+        line-height: 48px;
+    }
+    h2 {
+        font-size: 28px;
+        line-height: 36px;
+    }
+    .heading-style-h4 {
+        font-size: 22px;
+        line-height: 28px;
+    }
     .section-header {
         flex-direction: column;
         gap: 16px;
@@ -1292,17 +1324,26 @@ textarea.contact-form_input {
     .speakers_grid {
         grid-template-columns: 1fr;
     }
+    .speakers-details {
+        min-height: 200px;
+        padding: 30px;
+        border-radius: 30px;
+    }
+    .speakers-image-wrapper {
+        min-height: 250px;
+        border-radius: 30px;
+    }
     .why-card-number {
         font-size: 96px;
         bottom: -10%;
     }
     .register_component {
-        padding: 64px 32px;
-        height: 280px;
+        padding: 40px 24px;
+        height: auto;
     }
     .register-timer {
-        font-size: 128px;
-        line-height: 128px;
+        font-size: 56px;
+        line-height: 60px;
     }
     .agenda_row {
         flex-flow: column;
@@ -1319,16 +1360,28 @@ textarea.contact-form_input {
     }
 }
 @media screen and (max-width: 479px) {
+    h1, .heading-style-h1 {
+        font-size: 36px;
+        line-height: 40px;
+    }
+    h2 {
+        font-size: 24px;
+        line-height: 30px;
+    }
+    .heading-style-h4 {
+        font-size: 20px;
+        line-height: 26px;
+    }
     .hero_component {
         padding: 32px 24px;
     }
     .register_component {
-        padding: 64px 24px;
-        height: 216px;
+        padding: 30px 16px;
+        height: auto;
     }
     .register-timer {
-        font-size: 64px;
-        line-height: 64px;
+        font-size: 36px;
+        line-height: 40px;
     }
     .feature_card, .feature_card-first {
         padding: 24px;

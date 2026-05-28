@@ -44,4 +44,33 @@ document.addEventListener("DOMContentLoaded", function () {
         window.addEventListener("scroll", updateNav, { passive: true });
         updateNav();
     }
+
+    // ScrollSpy active link toggle logic
+    const navLinks = document.querySelectorAll(".navbar_component .navbar_link");
+    const sections = document.querySelectorAll("section[id]");
+
+    const updateActiveLink = () => {
+        let currentSectionId = "";
+        const scrollPosition = window.scrollY + 120; // Offset to trigger active state when section is near top
+
+        sections.forEach(section => {
+            const sectionTop = section.offsetTop;
+            const sectionHeight = section.offsetHeight;
+            if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
+                currentSectionId = section.getAttribute("id");
+            }
+        });
+
+        if (currentSectionId) {
+            navLinks.forEach(link => {
+                link.classList.remove("active", "w--current");
+                if (link.getAttribute("href") === `#${currentSectionId}`) {
+                    link.classList.add("active", "w--current");
+                }
+            });
+        }
+    };
+
+    window.addEventListener("scroll", updateActiveLink, { passive: true });
+    updateActiveLink(); // Initial call
 });
