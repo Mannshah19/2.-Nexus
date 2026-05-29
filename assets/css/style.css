@@ -487,7 +487,7 @@ p {
     grid-template-columns: 1fr 1fr;
 }
 .agenda-row-left {
-    width: 584px;
+    width: 100%;
     display: flex;
     flex-direction: column;
     gap: 16px;
@@ -503,7 +503,7 @@ p {
     font-weight: 700;
 }
 .agenda-row-right {
-    width: 584px;
+    width: 100%;
     display: flex;
     flex-direction: column;
     gap: 16px;
@@ -1115,7 +1115,8 @@ textarea.contact-form_input {
     font-size: 16px;
     line-height: 24px;
     color: #aaaaaa;
-    width: 496px;
+    max-width: 496px;
+    width: 100%;
     display: flex;
     flex-direction: column;
     gap: 8px;
@@ -1169,6 +1170,12 @@ textarea.contact-form_input {
     border-bottom-color: rgba(255, 255, 255, 0.8);
     color: var(--nx-white);
 }
+@media screen and (max-width: 1200px) {
+    .ticket_card {
+        padding: 40px 32px;
+        gap: 64px;
+    }
+}
 @media screen and (max-width: 991px) {
     h1, .heading-style-h1 {
         font-size: 64px;
@@ -1191,6 +1198,9 @@ textarea.contact-form_input {
         min-height: 64px;
         padding: 16px 5%;
     }
+    .navbar_container {
+        flex-wrap: wrap;
+    }
     .navbar_menu-links {
         display: flex;
         flex-direction: column;
@@ -1198,9 +1208,19 @@ textarea.contact-form_input {
         gap: 8px;
         padding-top: 16px;
     }
+    .logo-wrapper {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 24px;
+        padding: 24px 0;
+    }
     .feature_component {
         grid-template-columns: 1fr;
         grid-template-rows: auto;
+    }
+    .feature_card-first {
+        grid-row: span 1;
+        gap: 40px;
     }
     .speakers_grid {
         grid-template-columns: 1fr 1fr;
@@ -1215,6 +1235,10 @@ textarea.contact-form_input {
         display: flex;
         flex-direction: column;
         gap: 16px;
+    }
+    .testimonial_card h3 {
+        font-size: 28px;
+        line-height: 36px;
     }
     .tickets-wrapper {
         display: flex;
@@ -1238,6 +1262,10 @@ textarea.contact-form_input {
     }
     .hero-title {
         height: auto;
+    }
+    .hero-title div {
+        font-size: 18px;
+        line-height: 27px;
     }
     .section_hero, .padding-global.padding-section-medium.is-flex {
         height: auto;
@@ -1291,8 +1319,17 @@ textarea.contact-form_input {
         flex-direction: column;
         gap: 24px;
     }
+    .contact_form-wrapper {
+        padding: 60px 40px;
+        gap: 32px;
+        border-radius: 40px;
+    }
     .contact-map-wrapper {
         height: 400px;
+    }
+    .agenda_component {
+        padding: 64px 32px;
+        gap: 48px;
     }
 }
 @media screen and (max-width: 767px) {
@@ -1318,12 +1355,38 @@ textarea.contact-form_input {
         font-size: 16px;
         line-height: 22.4px;
     }
+    .button {
+        padding: 10px 24px;
+        font-size: 18px;
+        height: 50px;
+        line-height: 28px;
+    }
     .hero_component {
         padding: 40px 32px;
+    }
+    .hero-top-content {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 12px;
+        font-size: 16px;
+        line-height: 24px;
+    }
+    .hero-title div {
+        font-size: 16px;
+        line-height: 24px;
     }
     .speakers_grid {
         grid-template-columns: 1fr;
     }
+    .speakers_grid > :nth-child(1) { order: 1; }
+    .speakers_grid > :nth-child(2) { order: 2; }
+    .speakers_grid > :nth-child(3) { order: 3; }
+    .speakers_grid > :nth-child(4) { order: 4; }
+    .speakers_grid > :nth-child(6) { order: 5; }
+    .speakers_grid > :nth-child(5) { order: 6; }
+    .speakers_grid > :nth-child(8) { order: 7; }
+    .speakers_grid > :nth-child(7) { order: 8; }
+    
     .speakers-details {
         min-height: 200px;
         padding: 30px;
@@ -1336,6 +1399,14 @@ textarea.contact-form_input {
     .why-card-number {
         font-size: 96px;
         bottom: -10%;
+    }
+    .why-content, .why-content.is-left-aligned {
+        align-self: flex-start;
+        max-width: 100%;
+    }
+    .testimonial_card h3 {
+        font-size: 24px;
+        line-height: 32px;
     }
     .register_component {
         padding: 40px 24px;
@@ -1357,6 +1428,24 @@ textarea.contact-form_input {
     }
     .agenda-cta {
         grid-template-columns: 1fr;
+    }
+    .agenda_component {
+        padding: 40px 20px;
+        gap: 32px;
+    }
+    .feature-card-sub {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 16px;
+    }
+    .contact_form-wrapper {
+        padding: 40px 24px;
+        gap: 24px;
+        border-radius: 30px;
+    }
+    .footer_links-wrapper {
+        flex-wrap: wrap;
+        gap: 24px;
     }
 }
 @media screen and (max-width: 479px) {
@@ -1380,8 +1469,11 @@ textarea.contact-form_input {
         height: auto;
     }
     .register-timer {
-        font-size: 36px;
-        line-height: 40px;
+        font-size: 32px;
+        line-height: 36px;
+    }
+    .register-svg {
+        display: none;
     }
     .feature_card, .feature_card-first {
         padding: 24px;
@@ -1390,10 +1482,15 @@ textarea.contact-form_input {
     .speakers-details, .ticket_card, .contact_component {
         padding: 24px;
     }
-    .order-mobile-3 { order: 3; }
-    .order-mobile-4 { order: 4; }
-    .order-mobile-5 { order: 5; }
-    .order-mobile-6 { order: 6; }
+    .contact_form-wrapper {
+        padding: 30px 20px;
+        gap: 20px;
+        border-radius: 20px;
+    }
+    .logo {
+        width: 100px;
+        height: 40px;
+    }
 }
 .feature-card-top-wrapper {
     display: flex;
